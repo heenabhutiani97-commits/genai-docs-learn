@@ -1,0 +1,78 @@
+## TOKENIZATION -- PRACTICAL EXAMPLE:
+
+Let's take one simple input:
+
+"I am learning GENAI"
+
+This is our input/prompt.
+
+Tokenizer will break this input into smaller chunks, and these smaller chunks are called tokens.
+
+For example, it can be broken like:
+
+"I" , " am" , " learning" , " GEN" , "AI"
+
+Here we can see that token is not always equal to a complete word. One word can also be divided into multiple tokens depending on the tokenizer.
+
+After creating tokens, every token is mapped to a unique numerical ID called Token ID.
+
+For example:
+
+"I"          --> 40
+" am"        --> 716
+" learning"  --> 4201
+" GEN"       --> 9832
+"AI"         --> 1587
+
+These numbers are just examples.
+
+So the complete flow is:
+
+Input
+↓
+Tokenizer
+↓
+Tokens
+↓
+Token IDs
+↓
+LLM
+
+Important point:
+
+Token = piece of text
+
+Token ID = number representing that token
+
+LLM needs numbers instead of raw text because the model performs mathematical/statistical computations on numerical representations.
+
+---
+
+## ANOTHER EXAMPLE:
+
+Input:
+
+"I love working with data"
+
+Tokenizer can break it into smaller pieces like:
+
+"I" , " love" , " working" , " with" , " data"
+
+Then these tokens are mapped to Token IDs.
+
+So:
+
+"I love working with data"
+↓
+Tokenizer
+↓
+["I", " love", " working", " with", " data"]
+↓
+Token IDs
+↓
+LLM
+
+The important thing to understand here is that the LLM does not directly take our raw text and process it as humans understand it.
+
+The text first goes through tokenization and gets converted into numerical representations which the model can process.
+
