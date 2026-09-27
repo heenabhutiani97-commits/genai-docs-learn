@@ -1,0 +1,52 @@
+Hey,
+
+This is the introduction chapter of GENAI -- Firstly we will see how GENAI comes into the picture.
+
+Firstly we only have AI which includes the knowledge base of some experts and helps to get the answers using typewritten chatbot from a very small data.
+
+Then ML comes into the picture whose algorithms were fair enough to generate patterns from the data which was helpful in prediction and at that time weather prediction, customer churn algorithms were being used very effectively.
+
+Then we moved towards recurrent neural networks i.e. deep learning........ which helped us to understand human language in a more effective manner which resulted into NLP, a very famous topic at that duration, but still we were fighting more on accuracy......
+
+Then we landed into the ERA of GENAI-----that is being trained to generate human-like content.
+
+---
+
+## HOW GENAI Works???
+
+In GENAI -- firstly we pass our input as text, audio, video, image etc. that is said as prompt to the model which will give us the output that is being called as output.
+
+If we will pass the same prompt to the model even then output can vary .. how it is possible.....
+
+Our GENAI model is trained on HUGE DATA... and also when we are chatting with them, the model is NOT necessarily being trained again from every conversation.
+
+This is how it works when we feed the prompt to understand that input:
+
+input ----> tokens ----> token IDs ----> LLM
+
+Same works in reverse order to generate outputs:
+
+LLM ----> token IDs ----> tokens ----> text ----> outputs
+
+---
+
+## TOKENIZATION:
+
+Tokenizer is a process when we feed any input or prompt -- this tokenizer will break the input into smaller chunks, that means it will split the input and then these tokens will be converted into token IDs i.e. numbers because these models work better with numbers than raw text.
+
+So:
+
+input --> tokens --> token IDs --> LLM
+
+The token IDs are numerical representations that the model can process.
+
+---
+
+## How does the model decide the output?
+
+The model predicts the next possible token based on probability distribution.
+
+There can be multiple possible tokens that can come next. The model uses probability to decide which token to generate.
+
+But still there is randomness applied to the generation process, that's why even for the same input we can have different outputs.
+
