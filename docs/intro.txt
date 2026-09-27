@@ -50,3 +50,27 @@ There can be multiple possible tokens that can come next. The model uses probabi
 
 But still there is randomness applied to the generation process, that's why even for the same input we can have different outputs.
 
+## EMBEDDINGS:
+
+It is basically used so that we can find the relation between the words -- if the words are connected to each other or not.
+
+Tokens are basically conversion of text into numbers so that LLM can process the inputs, but with the help of embeddings we find the relation or can say context/meaning in the text.
+
+Embedding represents the text as a vector (a list of numbers).
+
+Related words or text generally have vectors which are closer/similar to each other, while unrelated text will have vectors which are less similar.
+
+For example:
+
+"dog"    → [0.21, -0.45, 0.87, ...]
+"puppy"  → [0.24, -0.41, 0.82, ...]
+"car"    → [0.91,  0.02, -0.73, ...]
+
+Here "dog" and "puppy" will generally have more similar embeddings because their meaning/context is related.
+
+So:
+
+Tokenization → converts text into tokens and token IDs so that the model can process the text.
+
+Embeddings → convert text into vectors so that we can represent and compare the meaning/semantic relationship of the text.
+
