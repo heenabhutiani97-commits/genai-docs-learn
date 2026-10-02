@@ -74,3 +74,154 @@ Tokenization → converts text into tokens and token IDs so that the model can p
 
 Embeddings → convert text into vectors so that we can represent and compare the meaning/semantic relationship of the text.
 
+## VECTORS:
+
+Vectors are basically a list of numbers in mathematics, but if we will talk about AI here, embeddings of text are represented by a list of numbers which is basically a vector.
+
+Different properties/relationships of the text are represented in these numbers, but these numbers are not usually human readable. We cannot say that one particular number represents one specific property.
+
+The complete vector together represents the semantic information of the text.
+
+When we compare two vectors, we can find how similar or related the texts are.
+
+For example:
+
+"dog"   → [0.21, -0.45, 0.87, ...]
+"puppy" → [0.24, -0.41, 0.82, ...]
+
+The complete vectors can be compared to find that "dog" and "puppy" are semantically related.
+
+So:
+
+Embedding → converts text into a vector
+
+Vector → list of numbers representing the embedding
+
+Vector Similarity → helps us find how similar two vectors/texts are
+
+Embedding
+   ↓
+Vector
+   ↓
+Compare vectors
+   ↓
+Find similarity
+
+## VECTOR SIMILARITY:
+
+Vector similarity is the process where we can compare 2 or more vectors to find the closeness/similarity between them.
+
+Now technically, this can be done using different similarity measures. One commonly used method in GenAI is **cosine similarity**.
+
+Cosine similarity checks the angle/direction between 2 vectors.
+
+If 2 vectors are pointing in a similar direction, then their cosine similarity will be high, which means the texts represented by those vectors are more semantically similar.
+
+If the vectors are pointing in very different directions, then the cosine similarity will be low, which means the texts are less similar.
+
+So:
+
+Vectors
+↓
+Compare vectors
+↓
+Cosine similarity
+↓
+Measure how similar the vectors are
+↓
+Find semantically similar text
+
+
+## CONTEXT WINDOW:
+
+Context window is an important concept because the context provided to the LLM can affect the output.
+
+Context window is basically the number of tokens that an LLM can process as context at a time.
+
+It does not mean that this is the memory limit of the LLM.
+
+We cannot pass a very large document to the model in one go if the document exceeds the model's context window, because the model can process only a limited number of tokens at a time.
+
+So, the model can process the amount of context according to its supported token limit.
+
+One important point: a large context window does not automatically mean more accuracy. If the context provided is irrelevant or incorrect, the model can still generate a wrong answer.
+
+For normal LLM processing:
+
+Text → Tokens/Token IDs → LLM → Output
+
+For RAG:
+
+Documents → Chunks → Embeddings → Vectors → Vector Similarity → Relevant chunks → Context Window → LLM → Answer
+
+So, context window can be thought of as the amount of information/tokens that the model can work with at one time.
+
+
+## PARAMETERS:
+
+Whenever we develop a model that needs to learn from data, we train that model by feeding training data to the model.
+
+Once we feed the data to the model, model training starts. During model training, the model learns patterns from the data and adjusts/learns its parameters based on those patterns.
+
+These parameters are numerical values inside the model that help the model make predictions or generate outputs.
+
+For example, we may hear about a model with **7 billion parameters (7B)**.
+
+This means the model has approximately 7 billion learned numerical parameters. These parameters are learned/adjusted during training; we do not manually set all 7 billion parameters.
+
+After training, the trained model uses these learned parameters during inference to generate output for a prompt.
+
+Important:
+
+**Training → Model learns patterns and parameters are adjusted → Trained Model → Inference → Output**
+
+Also, a larger number of parameters does not automatically mean more accurate output.
+
+## TRAINING VS INFERENCE:
+
+**Training:**
+
+Training is when we train our model using a large amount of data so that the model can learn patterns from the data.
+
+During training, the model learns/adjusts its parameters to improve its ability to generate accurate and useful outputs.
+
+Training is done to make the model perform better during inference.
+
+**Inference:**
+
+Inference is when we use the already-trained model to generate an output for a given prompt.
+
+During inference, the model uses its already-learned parameters to generate the response. Normally, its parameters are not updated during inference.
+
+**Important points:**
+
+* Training generally requires more computational resources than inference.
+* Training → Learning patterns and adjusting parameters.
+* Inference → Using the trained model to generate output.
+
+Example:
+
+Training = Teaching a student.
+
+Inference = The student applying what they have learned to answer a question.
+
+## TEMPERATURE:
+
+Temperature is basically not used to train the model. It is mainly valuable during inference, which means while generating output from an LLM.
+
+We have high or low temperature values.
+
+If the temperature is low, the LLM generates a more predictable/consistent response and is more likely to choose higher-probability tokens.
+
+If the temperature is high, the LLM generates more varied responses and lower-probability tokens have more chance of being selected.
+
+High and low temperature does not assure accuracy. Temperature is mainly about controlling how predictable or varied the generated response is.
+
+Low Temperature → More predictable / consistent response
+
+High Temperature → More varied / creative response
+
+For example, for creative writing or brainstorming, a higher temperature can allow more out-of-the-box responses.
+
+For tasks where we want more predictable output, such as generating SQL or code, a lower temperature can generally be more suitable.
+
