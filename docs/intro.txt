@@ -225,3 +225,10 @@ For example, for creative writing or brainstorming, a higher temperature can all
 
 For tasks where we want more predictable output, such as generating SQL or code, a lower temperature can generally be more suitable.
 
+
+#TRANSFORMER ARCHITECTURE
+
+as per the old models we used to use ML models and RNN and it generates the output in seq but now we are using transformer,which includes sequentila
+generationn during pretraining and transformer includes the input and then tokenization(to generate tokenids ) and then will apply embeddings(means
+will create some vectors and posn of token means similar tokens will be closed to each other and then applying contextual understanding to get the
+knowledge and then this process continues and will generate outputs)
