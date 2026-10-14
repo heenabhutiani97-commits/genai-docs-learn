@@ -1,0 +1,14 @@
+
+# Environment variables and API secrets
+.env
+**/.env
+
+# Python virtual environments
+venv/
+.venv/
+**/venv/
+**/.venv/
+
+# Python cache files
+__pycache__/
+*.pyc

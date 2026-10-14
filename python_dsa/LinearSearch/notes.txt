@@ -1,0 +1,36 @@
+#TIME COMPLEXITY
+Time complexity means how the programme performance changes  as the input size increases.In other words,we can say that how much workor number of operatiosn will be incraesed if there is grow in number
+of inputs.This is measured by BIG O Notation which will not tell the time in seconds but the growing in work w.r t. inreasing input.
+
+list1=[1,2,3,4,4]
+
+For EXample:
+1. O(1)------> TC Notation:Constant TIME
+
+If we are tracing a list with the help of index then TC will be O(1) no matter the size of list.
+
+For example:print(list1[1])-----> to find the ist element of list using index.---TC O(1)
+
+
+2. O(n)------>TC Notation:Linear Time
+
+If we will serach an element in the list with the element value rather than its index ,So if the size of list increases then the traversal operations
+also increases,hence number of operations increases linearly with number of elements.
+
+
+for eg: 
+for number in list1:
+    print(number)
+
+Abover we are visiting every element
+
+
+if the number of elemnt increases from 5 to 20 ----->then for loop with iterate 20 times------->n-----size of input in O(n)
+
+
+Linear Search:
+
+Worst Case:------> element will be present at last-----O(n)--will make us to perform n number of operations where n is the size of input.
+Best Case:--------> element will be present at ist posn-----O(1)----will make us to perform only 1operaition ---TC O(1)
+
+#SPACE COMPLEXITY::::::
